@@ -189,21 +189,20 @@ html, body {
     left: 37%;
     width: 500px;
     height: 15px;
-    background-color: var(--color1);
-    border: 2px solid white;
+    background-color: white;
+    border: 2px solid var(--color2);
 }
 
 #innerhpbar {
-    padding-left: 0px;
     height: 100%;
     width: 50%;
-    background-color: var(--color2);
+    background-color: var(--color1);
 }
 
 .pb {
     position: fixed;
     bottom: 5px;
-    left: 65%;
+    left: 63%;
     background: var(--color1);
     box-shadow: 0 6px 0 var(--color-shadow);
     border-radius: 20px;
@@ -271,6 +270,79 @@ html, body {
     text-align: center;
     height: 100%;
     width: 100%;
+}
+
+.score {
+    position: absolute;
+    top: 25px;
+    left: 37%;
+    width: 500px;
+    height: 15px;
+}
+
+#score {
+    position: absolute;
+    padding-top: 5px;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+}
+
+.acc {
+    position: absolute;
+    top: 25px;
+    left: 37%;
+    width: 500px;
+    height: 15px;
+}
+
+#acc {
+    position: absolute;
+    padding-top: 5px;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+}
+
+.playerInfo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 200px;
+    height: 60px;
+    font-size: 17px;
+}
+
+#playerPic {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+#playerName {
+    position: absolute;
+    padding-left: 65px;
+}
+
+#playerRank {
+    position: absolute;
+    padding-left: 65px;
+    padding-top: 21px;
+}
+
+#playerCountry {
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    padding-left: 65px;
+    bottom: 0px;
+}
+
+#playerRankCountry {
+    position: absolute;
+    padding-left: 93px;
+    bottom: -2px;
+    padding-bottom: 0px;
 }
 
 .hidden {

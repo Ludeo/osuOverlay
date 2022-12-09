@@ -10,6 +10,13 @@ let hidelbDiv = document.getElementById("hideleaderboard");
 let h100Div = document.getElementById("h100");
 let h50Div = document.getElementById("h50");
 let h0Div = document.getElementById("h0");
+let scoreDiv = document.getElementById("score");
+let accDiv = document.getElementById("acc");
+let playerPicDiv = document.getElementById("playerPic");
+let playerNameDiv = document.getElementById("playerName");
+let playerRankDiv = document.getElementById("playerRank");
+let playerCountryDiv = document.getElementById("playerCountry");
+let playerRankCountryDiv = document.getElementById("playerRankCountry");
 
 let lb1avatar = document.getElementById("leaderboard1avatar");
 let lb1score = document.getElementById("leaderboard1score");
@@ -130,6 +137,9 @@ socket.onmessage = event => {
 		document.getElementsByClassName("h100")[0].classList.remove("hidden");
 		document.getElementsByClassName("h50")[0].classList.remove("hidden");
 		document.getElementsByClassName("h0")[0].classList.remove("hidden");
+		document.getElementsByClassName("score")[0].classList.remove("hidden");
+		document.getElementsByClassName("acc")[0].classList.remove("hidden");
+		document.getElementsByClassName("playerInfo")[0].classList.remove("hidden");
 		//hidelbDiv.classList.remove("hidden");
 		hpOuter.classList.remove("hidden");
 	} else {
@@ -143,6 +153,9 @@ socket.onmessage = event => {
 		document.getElementsByClassName("h100")[0].classList.add("hidden");
 		document.getElementsByClassName("h50")[0].classList.add("hidden");
 		document.getElementsByClassName("h0")[0].classList.add("hidden");
+		document.getElementsByClassName("score")[0].classList.add("hidden");
+		document.getElementsByClassName("acc")[0].classList.add("hidden");
+		document.getElementsByClassName("playerInfo")[0].classList.add("hidden");
 		hidelbDiv.classList.add("hidden");
 		hpOuter.classList.add("hidden");
 		lbDataProcessed = new Map();
@@ -465,10 +478,10 @@ socket.onmessage = event => {
 				document.getElementsByClassName("pb")[0].classList.remove("hidden");
 			}
 		}
-
+	
 		if(lastTime + 2000 < data.menu.bm.time.current) {
 			lastTime = data.menu.bm.time.current;
-
+	
 			if(lastCombo == data.gameplay.combo.current) {
 				hidelbDiv.classList.remove("hidden");
 			} else {
@@ -476,6 +489,16 @@ socket.onmessage = event => {
 				hidelbDiv.classList.add("hidden");
 			}
 		}
+
+		playerPicDiv.src = "https://a.ppy.sh/" + playerId;
+
+		playerCountryDiv.src = "./flags/" + playerInfo.country.toLowerCase() + ".svg";
+
+		playerNameDiv.innerHTML = playerInfo.name;
+
+		playerRankDiv.innerHTML = "#" + playerInfo.rank;
+
+		playerRankCountryDiv.innerHTML = "#" + playerInfo.countryRank;
 	}
 	
 	if(data.gameplay.hits.unstableRate >= 0) {
@@ -519,5 +542,13 @@ socket.onmessage = event => {
 
 	if(data.gameplay.hits["0"] >= 0) {
 		h0Div.innerHTML = data.gameplay.hits["0"];
+	}
+
+	if(data.gameplay.score >= 0) {
+		scoreDiv.innerHTML = data.gameplay.score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	if(data.gameplay.accuracy >= 0) {
+		accDiv.innerHTML = data.gameplay.accuracy + "%";
 	}
 }
