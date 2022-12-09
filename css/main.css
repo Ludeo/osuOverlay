@@ -1,0 +1,278 @@
+:root {
+    --color1: #fc6fa5;
+    --color2: #fa3e86;
+    --color-shadow: #fa3e86;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.star {
+    position: fixed;
+    left: 5px;
+    top: 34%;
+    background: var(--color1);
+    box-shadow: 0 6px 0 var(--color-shadow);
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+}
+
+#star {
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+#starIcon {
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.bpm {
+    position: fixed;
+    left: 110px;
+    top: 34%;
+    background: var(--color1);
+    box-shadow: 0 6px 0 var(--color-shadow);
+    border-radius: 20px;
+    height: 40px;
+    width: 110px;
+}
+
+#bpm {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ur {
+    position: fixed;
+    bottom: 50px;
+    left: 48%;
+    background: var(--color1);
+    box-shadow: 0 6px 0 var(--color-shadow);
+    border-radius: 20px;
+    height: 40px;
+    width: 80px;
+}
+
+#ur {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.pp {
+    position: fixed;
+    bottom: 5px;
+    left: 58%;
+    background: var(--color1);
+    box-shadow: 0 6px 0 var(--color-shadow);
+    border-radius: 20px;
+    height: 40px;
+    width: 80px;
+}
+
+#pp {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.combo {
+    position: fixed;
+    bottom: 5px;
+    left: 38%;
+    background: var(--color1);
+    box-shadow: 0 6px 0 var(--color-shadow);
+    border-radius: 20px;
+    height: 40px;
+    width: 80px;
+}
+
+#combo {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.leaderboard {
+    position: fixed;
+    left: 5px;
+    top: 40%;
+    width: 200px;
+    height: 500px;
+}
+
+#leaderboard {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+#leaderboard tr {
+    padding-top: 5px;
+}
+
+#leaderboard tr > td > img {
+    width: 40px;
+}
+
+#leaderboard tr > td > span {
+    font-size: 12px;
+}
+
+/* score */
+#leaderboard tr > td > :nth-child(2) {
+    position: absolute;
+    padding-top: 22px;
+    padding-left: 5px;
+    width: 100px;
+}
+
+/* name */
+#leaderboard tr > td > :nth-child(3) {
+    position: absolute;
+    padding-left: 5px;
+    width: 100px;
+    overflow: hidden;
+    padding-top: 2px;
+}
+
+/* combo */
+#leaderboard tr > td > :nth-child(4) {
+    position: absolute;
+    padding-top: 22px;
+    padding-left: 115px;
+}
+
+/* pp */
+#leaderboard tr > td > :nth-child(5) {
+    position: absolute;
+    padding-left: 170px;
+    padding-top: 2px;
+}
+
+/* acc */
+#leaderboard tr > td > :nth-child(6) {
+    position: absolute;
+    padding-left: 115px;
+    padding-top: 2px;
+}
+
+#hideleaderboard {
+    position: fixed;
+    left: 0px;
+    top: 39%;
+    background-color: black;
+    bottom: 0px;
+    width: 210px;
+    z-index: -1;
+}
+
+#outerhpbar {
+    position: absolute;
+    top: 5px;
+    left: 37%;
+    width: 500px;
+    height: 15px;
+    background-color: var(--color1);
+    border: 2px solid white;
+}
+
+#innerhpbar {
+    padding-left: 0px;
+    height: 100%;
+    width: 50%;
+    background-color: var(--color2);
+}
+
+.pb {
+    position: fixed;
+    bottom: 5px;
+    left: 65%;
+    background: var(--color1);
+    box-shadow: 0 6px 0 var(--color-shadow);
+    border-radius: 20px;
+    height: 40px;
+    width: 80px;
+}
+
+#pb {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.h100 {
+    position: fixed;
+    bottom: 5px;
+    left: 19%;
+    border-bottom: 2px solid #3cff00;
+    box-shadow: 0 5px 5px -5px #6eff41;
+    height: 40px;
+    width: 40px;
+}
+
+#h100 {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.h50 {
+    position: fixed;
+    bottom: 5px;
+    left: 22%;
+    border-bottom: 2px solid #ff8800;
+    box-shadow: 0 5px 5px -5px #ff9c2a;
+    height: 40px;
+    width: 40px;
+}
+
+#h50 {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.h0 {
+    position: fixed;
+    bottom: 5px;
+    left: 25%;
+    border-bottom: 2px solid #ff0000;
+    box-shadow: 0 5px 5px -5px #ff2d2d;
+    height: 40px;
+    width: 40px;
+}
+
+#h0 {
+    position: absolute;
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}

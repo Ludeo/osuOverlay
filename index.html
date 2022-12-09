@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludeo</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="ur">
+    <span id="ur"></span>
+  </div>
+  <div class="star">
+    <i class="fas fa-star" id="starIcon"></i>
+    <span id="star">0</span>
+  </div>
+  <div class="bpm">
+    <span id="bpm">0 BPM</span>
+  </div>
+  <div class="combo">
+    <span id="combo">0x</span>
+  </div>
+  <div class="pp">
+    <span id="pp">0pp</span>
+  </div>
+  <div class="leaderboard">
+    <table id="leaderboard">
+      <tr>
+        <td>
+          <img id="leaderboard1avatar" src="">
+          <span id="leaderboard1score"></span>
+          <span id="leaderboard1name"></span>
+          <span id="leaderboard1combo"></span>
+          <span id="leaderboard1pp"></span>
+          <span id="leaderboard1acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard2avatar" src="">
+          <span id="leaderboard2score"></span>
+          <span id="leaderboard2name"></span>
+          <span id="leaderboard2combo"></span>
+          <span id="leaderboard2pp"></span>
+          <span id="leaderboard2acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard3avatar" src="">
+          <span id="leaderboard3score"></span>
+          <span id="leaderboard3name"></span>
+          <span id="leaderboard3combo"></span>
+          <span id="leaderboard3pp"></span>
+          <span id="leaderboard3acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard4avatar" src="">
+          <span id="leaderboard4score"></span>
+          <span id="leaderboard4name"></span>
+          <span id="leaderboard4combo"></span>
+          <span id="leaderboard4pp"></span>
+          <span id="leaderboard4acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard5avatar" src="">
+          <span id="leaderboard5score"></span>
+          <span id="leaderboard5name"></span>
+          <span id="leaderboard5combo"></span>
+          <span id="leaderboard5pp"></span>
+          <span id="leaderboard5acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard6avatar" src="">
+          <span id="leaderboard6score"></span>
+          <span id="leaderboard6name"></span>
+          <span id="leaderboard6combo"></span>
+          <span id="leaderboard6pp"></span>
+          <span id="leaderboard6acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard7avatar" src="">
+          <span id="leaderboard7score"></span>
+          <span id="leaderboard7name"></span>
+          <span id="leaderboard7combo"></span>
+          <span id="leaderboard7pp"></span>
+          <span id="leaderboard7acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard8avatar" src="">
+          <span id="leaderboard8score"></span>
+          <span id="leaderboard8name"></span>
+          <span id="leaderboard8combo"></span>
+          <span id="leaderboard8pp"></span>
+          <span id="leaderboard8acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard9avatar" src="">
+          <span id="leaderboard9score"></span>
+          <span id="leaderboard9name"></span>
+          <span id="leaderboard9combo"></span>
+          <span id="leaderboard9pp"></span>
+          <span id="leaderboard9acc"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="leaderboard10avatar" src="">
+          <span id="leaderboard10score"></span>
+          <span id="leaderboard10name"></span>
+          <span id="leaderboard10combo"></span>
+          <span id="leaderboard10pp"></span>
+          <span id="leaderboard10acc"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="hideleaderboard"></div>
+  <div id="outerhpbar">
+    <div id="innerhpbar">
+    </div>
+  </div>
+  <div class="pb">
+    <span id="pb">PB</span>
+  </div>
+  <div class="h100">
+    <span id="h100">0</span>
+  </div>
+  <div class="h50">
+    <span id="h50">0</span>
+  </div>
+  <div class="h0">
+    <span id="h0">0</span>
+  </div>
+  
+  <script src="deps/reconnecting-websocket.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
